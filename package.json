@@ -1,0 +1,53 @@
+{
+  "name": "@tsnomad/tasks",
+  "version": "0.2.0",
+  "description": "Task, task strategy, task handler and idempotency contracts, the TypeScript counterpart to PHPNomad's tasks package",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/tsnomad/tasks#readme",
+  "bugs": {
+    "url": "https://github.com/tsnomad/tasks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsnomad/tasks.git"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.19"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepack": "npm run build",
+    "pretypecheck": "npm run build",
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json",
+    "pretest": "npm run build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tsnomad/di-container": "^0.2.0"
+  },
+  "devDependencies": {
+    "@tsnomad/loader": "^0.1.0",
+    "@types/node": "20.19.43",
+    "typescript": "5.9.3",
+    "vitest": "4.1.12"
+  }
+}
