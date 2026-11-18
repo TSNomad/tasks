@@ -93,8 +93,4 @@ This package moved into its own repository on 2026-11-17, at version
 
 ## License
 
-Copyright (C) 2026 TSNomad.
-
-This package is free software, released under the GNU General Public
-License, version 3 or any later version (GPL-3.0-or-later). It comes
-with no warranty. The full text is in [LICENSE](LICENSE).
+MIT.
